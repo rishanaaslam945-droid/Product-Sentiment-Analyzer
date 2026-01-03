@@ -1,0 +1,214 @@
+App.css /* =========================
+   Base Reset
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eef2f7;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+/* =========================
+   App Container
+========================= */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+/* =========================
+   Main Box
+========================= */
+.main-box {
+  width: 100%;
+  max-width: 850px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   Title
+========================= */
+.title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.title h1 {
+  font-size: 28px;
+  color: #1f2937;
+}
+
+.title p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* =========================
+   Input Section
+========================= */
+.input-area {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.input-area input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 6px rgba(59, 130, 246, 0.4);
+}
+
+.input-area button {
+  padding: 12px 22px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.input-area button:hover {
+  background: #2563eb;
+}
+
+/* =========================
+   Loader
+========================= */
+.loader {
+  width: 60px;
+  height: 60px;
+  margin: 25px auto;
+  border-radius: 50%;
+  border: 8px solid #e5e7eb;
+  border-top: 8px solid #3b82f6;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   Score Section
+========================= */
+.score-section {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+/* =========================
+   Chart Area
+========================= */
+.chart-area {
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+/* =========================
+   Reviews
+========================= */
+.reviews {
+  margin-top: 25px;
+}
+
+.review {
+  background: #f9fafb;
+  border-left: 5px solid #3b82f6;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+}
+
+.review.positive {
+  border-color: #16a34a;
+}
+
+.review.negative {
+  border-color: #dc2626;
+}
+
+.review.neutral {
+  border-color: #f59e0b;
+}
+
+/* =========================
+   Summary
+========================= */
+.summary-box {
+  margin-top: 25px;
+  padding: 15px;
+  background: #eff6ff;
+  border-radius: 10px;
+  color: #1e40af;
+}
+
+/* =========================
+   Word Cloud
+========================= */
+.wordcloud-box {
+  margin-top: 25px;
+  height: 280px;
+  border: 2px dashed #c7d2fe;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+}
+
+/* =========================
+   Pagination
+========================= */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background: #9ca3af;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 600px) {
+  .input-area {
+    flex-direction: column;
+  }
+
+  .main-box {
+    padding: 20px;
+  }
+}
